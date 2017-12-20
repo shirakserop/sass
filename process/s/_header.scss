@@ -8,34 +8,41 @@ header{
     @include clearfix;
     .title{
       float:left;
+      color:$title_text_color;
+      margin:0 20px;
+      font-family:'Lobster', cursive;
+      font-size: 40px;
+
+      h1{
+        margin:0;
+      }
     }
     ul{
       float: left;
+      padding-left: 10px;
       li{
         display:inline-block;
         a{
           display: block;
           padding:10px;
           margin-left: 3px;
-          background-color:$red;
-          color:$offwhite;
+          background-color:$menu_background_color;
+          color:$menu_text_color;
           text-align: center;
           text-decoration: none;
           transition: background-color .3s, color 1s ease-out ;
           &:hover {
-            background-color: $orange;
-            color: $darkblue;
+            background-color: $menu_hover_color;
+            color: $menu_hover_text_color;
           }
-
         }//a links
-
         .active{
-          background-color: $darkblue;
-          color:$offwhite;
+          background-color: $menu_active_color;
+          color:$menu_active_text_color;
           cursor: default;
           &:hover{
-            background-color: $darkblue;
-            color:$offwhite;
+            background-color: $menu_active_color;
+            color:$menu_active_text_color;
           }
         }
       }//li
@@ -43,22 +50,22 @@ header{
   }//nav
 }//header
 
-@include break(600px){
+@include break($small_screen_size){
     header{
       width: 100%;
       height:auto;
-      background-color:rgba(255,255,255,0);
+      background-color:$transparent;
       nav{
         padding: 0;
         .title{
           width:100%;
           margin:0;
-          border: 1px solid black;
+      //    border: 1px solid black;
           text-align: center;
         }//Title
         ul{
           width:100%;
-          border: 1px solid red;
+    //      border: 1px solid red;
           margin-top: 0;
           padding: 0;
           li{
@@ -66,12 +73,12 @@ header{
               a{
                 margin: 0;
               }
-            }
+            }//child first
               &:last-child{
                 a{
                   margin: 0;
                 }
-            }
+            }//last child
             display: block;
             width: 100%;
             margin: 0;
@@ -81,10 +88,7 @@ header{
               width:100%;
               margin:3px 0;
               }
-
-
           }// li 600px
-
         }//ul list
       }//nav break 600px
     } //header 600px

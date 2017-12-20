@@ -1,12 +1,39 @@
-//color variables
-$offwhite:    #EEE8D6;
-$darkblue:    #022933;
-$yellow:      #FFBA00;
-$blue:        #0076A3;
-$green:       #548C27;
-$orange:      #F39856;
-$red:         #D14348;
-$purple:      #6D73C2;
+
 //-----------------------------
-//settings 
-$nav_bkground: rgba(180,100,20,.5);
+//settings
+                            //fonts
+
+  //font-family: 'Lobster', cursive;
+  @import url('https://fonts.googleapis.com/css?family=Lobster');
+
+
+                            //colors
+
+  //color variables
+  $offwhite:    #EEE8D6;
+  $darkblue:    #022933;
+  $yellow:      #FFBA00;
+  $blue:        #0076A3;
+  $green:       #548C27;
+  $orange:      #F39856;
+  $red:         #D14348;
+  $purple:      #6D73C2;
+
+  //size
+  $small_screen_size: 600px;
+
+                        //page colors settings
+
+  //header_settings
+  $nav_bkground:              rgba(180,100,20,.5);
+  $transparent :              rgba(0,0,0,0);
+  //title-settings
+  $title_text_color:          $red;
+
+  //menu_settings
+  $menu_text_color:           $offwhite;
+  $menu_background_color:     $red;
+  $menu_hover_color:          $orange;
+  $menu_hover_text_color:     $darkblue;
+  $menu_active_color:         $blue;
+  $menu_active_text_color:    $yellow;
