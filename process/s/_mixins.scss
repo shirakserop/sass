@@ -8,3 +8,9 @@
     clear:both;
   }
 }
+
+
+@mixin radius($size){
+  border-radius: $size;
+  -webkit-border-radius: $size; 
+}
