@@ -1,12 +1,10 @@
-
-
-@mixin clearfix {
+@mixin clearfix{
   &:before,
-  &:after {
+  &:after{
     content: '';
     display: table;
   }
   &:after {
-    clear: both; 
+    clear:both;
   }
 }

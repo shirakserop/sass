@@ -2,44 +2,58 @@
   box-sizing: border-box;
 }
 
-body{
+html,body{
   margin:0;
   padding:0;
 }
 
-.container{
-  display: table;
-  padding:0;
-  margin:0 auto; 
+header{
+  margin: 0;
+  padding: 0 10px;
+  width:100%;
+  background-color: $yellow;
 
-    nav{
-      display: table;
-      padding: 20px;
-      background-color: $yellow;
-      width: 100%;
-
-      .title {
-        float:left;
-        @include clearfix;
-      }
-        ul{
-          display:table;
-          float:left;
-          @include clearfix;
-          li{
-            display: inline-block;
-            list-style: none;
-              a {
-                text-decoration: none;
-                display: block;
-                margin:5px;
-                background-color: $red;
-                padding: 10px;
-                color:$offwhite;
-
-              }
-
-          }
-        }
+  nav{
+    padding:10px;
+    @include clearfix;
+  .title {
+    margin:10px auto;
+    float: left;
+    color: $offwhite;
+    text-shadow: 0 0 5px $red;
+    h1{
+      margin:0;
     }
-}
+  }
+  .list {
+    display: block;
+    margin:10px;
+    float: left;
+    li {
+      display: inline-block;
+      list-style: none;
+
+      a{
+        display: block;
+        margin-left: 5px;
+        padding: 10px;
+        background-color:$red;
+        text-decoration: none;
+        color: $offwhite;
+        &:hover {
+          background-color: $orange;
+          color: $blue;
+        }
+        &:active{
+          background-color: $darkblue;
+          color: $yellow;
+        }
+      }//a links 
+
+
+      }//li
+
+    }//list
+  }//nav
+
+}//header
