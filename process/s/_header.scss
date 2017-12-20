@@ -1,85 +1,91 @@
+
 header{
-  margin: 0;
-  padding: 0 10px;
-  width:100%;
+  width: 100%;
+  height:auto;
   background-color: $nav_bkground;
-
-
   nav{
-    padding:10px;
-    margin: auto;
+    padding: 10px;
     @include clearfix;
-  .title {
-    margin:10px auto;
-    float: left;
-    color: $offwhite;
-    text-shadow: 0 0 5px $red;
-    cursor: default;
-    h1{
-      margin:0;
+    .title{
+      float:left;
     }
-  }
-  .list {
-    display: block;
-    margin:10px;
-    float: left;
-    li {
-      display: inline-block;
-      list-style: none;
-      .active{
-        background-color: $darkblue ;
-        color: $offwhite;
-        &:hover{
+    ul{
+      float: left;
+      li{
+        display:inline-block;
+        a{
+          display: block;
+          padding:10px;
+          margin-left: 3px;
+          background-color:$red;
+          color:$offwhite;
+          text-align: center;
+          text-decoration: none;
+          transition: background-color .3s, color 1s ease-out ;
+          &:hover {
+            background-color: $orange;
+            color: $darkblue;
+          }
+
+        }//a links
+
+        .active{
           background-color: $darkblue;
           color:$offwhite;
           cursor: default;
+          &:hover{
+            background-color: $darkblue;
+            color:$offwhite;
+          }
         }
-      }
-
-      a{
-        display: block;
-        background-color:$red;
-        text-decoration: none;
-        text-align: center;
-        padding:10px;
-        transition: background-color 0.2s ease-out ;
-      /*
-        width: 50px;
-        height:50px;
-        margin: 0;
-         */
-        @include radius(3px);
-        color: $offwhite;
-
-        &:hover{
-          background-color: $orange;
-          color: $blue;
-        }
-        &:active{
-          background-color: $darkblue;
-          color: $yellow;
-        }
-
-      }//a links
-
-
       }//li
-
-    }//list
-
+    }//ul
   }//nav
-
 }//header
 
-
 @include break(600px){
-  header,nav,.list,.title,li{
-    display: block;
-    width: 100%;
-    padding:0;
-    margin:0;
-    float:none;
-    text-align: center;
-    border: 1px solid black;
-  }
-}
+    header{
+      width: 100%;
+      height:auto;
+      background-color:rgba(255,255,255,0);
+      nav{
+        padding: 0;
+        .title{
+          width:100%;
+          margin:0;
+          border: 1px solid black;
+          text-align: center;
+        }//Title
+        ul{
+          width:100%;
+          border: 1px solid red;
+          margin-top: 0;
+          padding: 0;
+          li{
+            &:nth-child(1){
+              a{
+                margin: 0;
+              }
+            }
+              &:last-child{
+                a{
+                  margin: 0;
+                }
+            }
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding:0;
+
+            a{
+              width:100%;
+              margin:3px 0;
+              }
+
+
+          }// li 600px
+
+        }//ul list
+      }//nav break 600px
+    } //header 600px
+}//break
