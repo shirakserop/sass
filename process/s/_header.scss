@@ -17,7 +17,8 @@ header{
         margin:0;
       }
     }
-    ul{
+    .list{
+
       float: left;
       padding-left: 10px;
       li{
@@ -63,7 +64,8 @@ header{
       //    border: 1px solid black;
           text-align: center;
         }//Title
-        ul{
+        .list{
+          display: none;
           width:100%;
     //      border: 1px solid red;
           margin-top: 0;
@@ -90,6 +92,43 @@ header{
               }
           }// li 600px
         }//ul list
+        .menu_btn{
+          display: block;
+          position: absolute;
+          top: 0;
+          left:0;
+          padding-top: 3px;
+          width:35px;
+          height:35px;
+          margin:8px;
+          background-color: $nav_bkground;
+
+          span{
+            content: '';
+            display: block;
+            margin:5px auto;
+            width:80%;
+            height:3px;
+            background-color: $red;
+          }
+
+          &:hover{
+            background-color: $red;
+            cursor: pointer;
+            span{
+              background-color: $orange;
+            }
+          }//btn-menu- hover
+
+        }
+
       }//nav break 600px
     } //header 600px
+
+    .list_on{
+      display:block;
+    }
+    .list_off{
+      display:none;
+    }
 }//break
