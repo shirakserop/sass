@@ -2,10 +2,12 @@ header{
   margin: 0;
   padding: 0 10px;
   width:100%;
-  background-color: $yellow;
+  background-color: $nav_bkground;
+
 
   nav{
     padding:10px;
+    margin: auto;
     @include clearfix;
   .title {
     margin:10px auto;
@@ -46,7 +48,7 @@ header{
         height:50px;
         margin: 0;
          */
-        @include radius(3px); 
+        @include radius(3px);
         color: $offwhite;
 
         &:hover{
@@ -68,3 +70,16 @@ header{
   }//nav
 
 }//header
+
+
+@include break(600px){
+  header,nav,.list,.title,li{
+    display: block;
+    width: 100%;
+    padding:0;
+    margin:0;
+    float:none;
+    text-align: center;
+    border: 1px solid black;
+  }
+}

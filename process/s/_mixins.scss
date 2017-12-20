@@ -12,5 +12,24 @@
 
 @mixin radius($size){
   border-radius: $size;
-  -webkit-border-radius: $size; 
+  -webkit-border-radius: $size;
+}
+
+@mixin break($width){
+  @media screen and (max-width: $width){
+    @content;
+  }
+
+}
+
+@mixin grid($cells,$margin){
+    width: ((100% - ($cells - 1)* $margin)/$cells);
+    &:nth-child(n){
+      margin-left: $margin;
+      margin-top: $margin;
+    }
+    &:nth-child(#{$cells}n){
+      margin-left:0; 
+      margin-top: 0;
+    }
 }
