@@ -1,0 +1,48 @@
+
+#body_page{
+  display: block;
+  width: 100%;
+//  border: 2px dotted red;
+  margin: 0;
+  padding:0;
+  background-color:$offwhite;
+  .container_items{
+    padding: 10px;
+    @include clearfix;
+    .item{
+        float:left;
+        margin:0;
+        @include grid(2,1%);
+
+        p{
+          display:block;
+          max-width:100%;
+          background-color: $nav_bkground;
+          color:$darkblue;
+          border: 1px solid black;
+          padding:20px;
+          margin:0;
+          @include radius(12px);
+          text-align: justify;
+
+        }
+
+      }
+    }
+}
+
+@include break($small_screen_size){
+  #body_page{
+    .container_items{
+      .item{
+        @include grid(1,1%);
+        p{
+          background-color: $offwhite;
+          color:$darkblue;
+        }
+
+      }
+    }
+  }
+
+}
