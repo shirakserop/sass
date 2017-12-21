@@ -24,11 +24,11 @@
 @mixin grid($cells,$margin){
     width: ((100% - ($cells - 1)* $margin)/$cells);
     &:nth-child(n){
-      margin-left: $margin;
+      margin-right: $margin;
       margin-top: $margin;
     }
     &:nth-child(#{$cells}n){
-      margin-left:0;
-      margin-top: 0;
+      margin-right:0;
+      margin-bottom: 0;
     }
 }
