@@ -1,0 +1,15 @@
+#carusel{
+  display: block;
+  padding:0;
+  max-width:1000px;
+//  border: 3px solid black;
+  margin: 0 auto;
+  .carusel_item{
+
+    display: none;
+    width:100%;
+  //  border: 1px solid red;
+    margin: 0 auto;
+  }
+
+}
