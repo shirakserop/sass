@@ -6,37 +6,39 @@ var btn = document.getElementsByClassName("menu_btn")[0],
 
 
 
-  /*  btn.onclick = function(){
-      if(!menu.hasAttribute("style")){
-        menu.setAttribute("style","display:block;");
-        console.log("list_on");
-      }else if(menu.hasAttribute("style")){
-        menu.setAttribute("style","display:none;")
-        menu.removeAttribute("style");
-        console.log("list_off");
-      }
-
-      console.log("clicked");
-    }
-*/
+// btn.onclick = function(){
+//     if(!menu.hasAttribute("style")){
+//       menu.setAttribute("style"," transition: display .6s linear; display:block;");
+//       console.log("list_on");
+//     }else if(menu.hasAttribute("style")){
+//       menu.setAttribute("style","transition: display .6s linear;  display:none;");
+//       console.log("list_off");
+//     }
+//   }
 
 
-var x = true;
-  btn.onclick = function(){
-    if(x == true){
-      x = false;
-      menu.setAttribute("style","display:block;");
-    }else if (x == false){
+
+
+
+
+
+var x = false;
+  btn.addEventListener("click", function(){
+    if(x == false){
       x = true;
-      menu.removeAttribute("style");
+      menu.setAttribute("class","list list_on");
+    }else if (x == true){
+      x = false;
+      menu.setAttribute("class","list list_off");
     }
-  }
+  });
 
 
   window.addEventListener("click",function(event){
     if(event.target != menu && event.target != btn){
-      x = true;
-      menu.removeAttribute("style");
+      x = false;
+      menu.setAttribute("class","list list_off");
+      //menu.setAttribute("style","transition: display .6s linear;  display:none;");
     }
 
   });

@@ -51,11 +51,17 @@ header{
   }//nav
 }//header
 
+
+
+
+//for devices 600px
+
+
 @include break($small_screen_size){
     header{
       width: 100%;
       height:auto;
-      background-color:$transparent;
+      background-color:$offwhite;
       nav{
         padding: 0;
         .title{
@@ -118,17 +124,24 @@ header{
             span{
               background-color: $orange;
             }
+
+          &:active{
+            background-color: $darkblue;
+            cursor: pointer;
+            span{
+              background-color: $offwhite;
+            }
+
+          }
           }//btn-menu- hover
 
         }
-
+          .list_on{
+            display:block;
+          }
+          .list_off{
+            display:none;
+          }
       }//nav break 600px
     } //header 600px
-
-    .list_on{
-      display:block;
-    }
-    .list_off{
-      display:none;
-    }
 }//break
