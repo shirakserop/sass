@@ -25,15 +25,25 @@
                         //page colors settings
 
   //header_settings
-  $nav_bkground:              rgba(180,100,20,.5);
-  $transparent :              rgba(0,0,0,0);
+  $nav_bkground:                    rgba(180,100,20,.5);
+  $transparent :                    rgba(0,0,0,0);
   //title-settings
-  $title_text_color:          $red;
+  $title_text_color:                $red;
 
   //menu_settings
-  $menu_text_color:           $offwhite;
-  $menu_background_color:     $red;
-  $menu_hover_color:          $orange;
-  $menu_hover_text_color:     $darkblue;
-  $menu_active_color:         $blue;
-  $menu_active_text_color:    $yellow;
+  $menu_text_color:                 $offwhite;
+  $menu_background_color:           $red;
+  $menu_hover_color:                $orange;
+  $menu_hover_text_color:           $darkblue;
+  $menu_active_color:               $blue;
+  $menu_active_text_color:          $yellow;
+
+  //body_page color settings
+
+  $body_page_background_color:      $offwhite;
+  $body_page_p_background_color:    $nav_bkground;
+  $body_page_p_text_color:          $darkblue;
+  $body_page_p_border_color:        $darkblue;
+        //600px screen
+        $body_page_p_media_background_color:    $offwhite;
+        $body_page_p_media_color:               $darkblue;

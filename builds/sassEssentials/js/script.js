@@ -2,6 +2,10 @@
 
 
 var btn = document.getElementsByClassName("menu_btn")[0],
+    span1 = document.getElementsByClassName('menu_btn_span')[0],
+    span2 = document.getElementsByClassName('menu_btn_span')[1],
+    span3= document.getElementsByClassName('menu_btn_span')[2],
+
   menu = document.getElementsByTagName('ul')[0];
 
 
@@ -35,7 +39,7 @@ var x = false;
 
 
   window.addEventListener("click",function(event){
-    if(event.target != menu && event.target != btn){
+    if(event.target != menu && event.target != btn && event.target != span1 && event.target != span2 && event.target != span3){
       x = false;
       menu.setAttribute("class","list list_off");
       //menu.setAttribute("style","transition: display .6s linear;  display:none;");
