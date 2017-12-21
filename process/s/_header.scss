@@ -61,7 +61,7 @@ header{
     header{
       width: 100%;
       height:auto;
-      background-color:$offwhite;
+      background-color:$header_background_media;
       nav{
         padding: 0;
         .title{
@@ -76,6 +76,7 @@ header{
     //      border: 1px solid red;
           margin-top: 0;
           padding: 0;
+          transition: 1s;
           li{
             &:nth-child(1){
               a{
@@ -97,6 +98,7 @@ header{
               margin:3px 0;
               }
           }// li 600px
+
         }//ul list
         .menu_btn{
           display: block;
@@ -116,6 +118,7 @@ header{
             width:80%;
             height:3px;
             background-color: $red;
+            transition: .5s;
           }
 
           &:hover{
@@ -139,9 +142,17 @@ header{
           .list_on{
             display:block;
           }
-          .list_off{
-            display:none;
-          }
+          .change_btn .menu_btn_span1{
+              transform: rotate(-45deg) translate( -7px, 5px );
+              -webkit-transform: rotate(-45deg) translate( -7px, 5px );
+            }
+            .change_btn .menu_btn_span3{
+              transform: rotate(45deg) translate( 7px, -5px );
+              -webkit-transform: rotate(45deg) translate( -6px, -5px );
+            }
+            .change_btn .menu_btn_span2{
+              width: 1px;
+            }
       }//nav break 600px
     } //header 600px
 }//break
