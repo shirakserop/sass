@@ -55,8 +55,6 @@ header{
 
 
 //for devices 600px
-
-
 @include break($small_screen_size){
     header{
       width: 100%;

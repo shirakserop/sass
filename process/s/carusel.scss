@@ -1,10 +1,10 @@
-#carusel{
+#carusel{ //general settings carousel
   position: relative;
   display: block;
   padding:0;
-  max-width: 1000px;
+  max-width: $carusel_width;
   //border: 3px solid black;
-  max-height: 600px;
+  max-height: $carusel_height;
   margin: 0 auto;
   .carusel_item{
     display: none;
@@ -16,19 +16,19 @@
     }
   }
 }
-#carusel{  //buttons
+#carusel{  //buttons next previous
   .carusel_item_right_btn, .carusel_item_left_btn{
     display: block;
     position: absolute;
     top: calc(50% - 27px);
-    width: 50px;
-    height: 50px;
+    width:$carusel_btns_size ;
+    height:$carusel_btns_size;
     background-color: $darkblue;
     border: 2px solid $offwhite;
-    z-index: 1;
+    z-index: 2;
     color: $offwhite;
     margin:0;
-    @include radius(50%);
+    @include radius($carusel_btns_radius);
     text-align: center;
     padding:13px 11px;
     cursor: pointer;
@@ -53,7 +53,7 @@
   .carusel_item_left_btn{
     left:20px;
   }
-  @include break($small_screen_size){
+  @include break($small_screen_size){ // media query
     .carusel_item_right_btn, .carusel_item_left_btn{
       background-color: $darkblue;
       border-radius:20px;
@@ -74,30 +74,31 @@
 }
 #carusel{ //caption
   .carusel_item_caption{
-    display: block;
+    display: none;
     position: absolute;
     bottom:9px;
     width:100%;
-    color:$offwhite;
+    color:$carusel_caption_color;
     text-align: center;
     text-shadow: 0 0 5px black;
-    z-index: 1;
+    text-transform: capitalize;
+    z-index: 2;
   }
 }
-#carusel_list{
+#carusel_list{  // dots styling
     display: block;
     position: absolute;
     bottom: 3px;
     left: 20px;
-    color:white;
-    z-index: 1;
+    color:$carusel_dots_color;
+    z-index: 2;           //z-index: 2
     padding: 0;
     @include clearfix;
     li{
       display:inline-block;
       float:left;
       div{
-        background-color: $offwhite;
+        background-color:$carusel_dots_color;
         border:1px;
         width: 10px;
         height:10px;
@@ -105,23 +106,21 @@
         border: 1px solid $darkblue;
       }
     }
-    .carusel_list_active{
-      background-color: $orange;
+    .carusel_list_active{ //selected dot
+      background-color: $carusel_dots_active_color;
     }
   }
-
-  .fade{
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1s;
-    animation-name: fade;
-    animation-duration: 1s;
+#carusel{
+  .carusel_gradient{
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity:0.6;
+    z-index: 1;
+    background: linear-gradient(0,black,$transparent 20%);
   }
 
-  @-webkit-keyframes fade{
-      from {opacity: .3;}
-      to {opacity: 1;}
-  }
-  @keyframes fade{
-      from {opacity: .3;}
-      to {opacity: 1;}
-  }
+}

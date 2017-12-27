@@ -6,3 +6,19 @@ html,body{
   margin:0;
   padding:0;
 }
+
+.fade{  //fade effect
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade{
+    from {opacity: .3;}
+    to {opacity: 1;}
+}
+@keyframes fade{
+    from {opacity: .3;}
+    to {opacity: 1;}
+}

@@ -12,7 +12,7 @@ var    carusel = document.querySelector('#carusel'),
        carusel_items = document.getElementsByClassName('carusel_item'),
        carusel_item_left_btn = document.querySelector('.carusel_item_left_btn'),
        carusel_item_right_btn = document.querySelector('.carusel_item_left_btn'),
-       carusel_item_caption = document.querySelector('.carusel_item_caption'),
+       carusel_item_caption = document.getElementsByClassName('carusel_item_caption'),
        carusel_list_item = document.getElementsByClassName('carusel_list_item');
 //End of carusel_items -------Variables-------
 
@@ -39,6 +39,7 @@ function X(){
 var x = 0;
 add_dots();
 list_item_selection(x);
+carusel_caption(x);
 function carusel_control(x){  // next , prev buttons function
   this.x += x;
   if(this.x > carusel_items.length -1 ){this.x = 0;}
@@ -46,6 +47,7 @@ function carusel_control(x){  // next , prev buttons function
   console.log("Which image:",this.x);
   carusel_show(this.x);
   list_item_selection(this.x);
+  carusel_caption(this.x);
 }
 function add_dots(){ // add dots automaticlly same time new image has been added
   for(var j=0; j < carusel_items.length; j++){
@@ -65,6 +67,15 @@ function list_item_selection(x_num){ // dots selection
   }
   carusel_list_item[this.num].classList.add('carusel_list_active');
   console.log("list_sel:",this.num);
+}
+function carusel_caption(captions){
+    var i;
+    this.captions = captions;
+    for(i=0; i< carusel_items.length; i++){
+      carusel_item_caption[i].style.display = "none";
+    }
+    carusel_item_caption[this.captions].style.display = "block";
+    console.log("captions:", this.captions);
 }
 function carusel_show(num){ // display images in the carousel
   this.num = num;
