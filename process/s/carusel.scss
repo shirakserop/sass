@@ -1,15 +1,109 @@
 #carusel{
+  position: relative;
   display: block;
   padding:0;
-  max-width:1000px;
-//  border: 3px solid black;
+  max-width: 1000px;
+  //border: 3px solid black;
+  max-height: 600px;
   margin: 0 auto;
   .carusel_item{
-
     display: none;
     width:100%;
   //  border: 1px solid red;
     margin: 0 auto;
+    &:first-child {
+      display: block;
+    }
   }
 
+}
+#carusel{  //buttons
+  .carusel_item_right_btn, .carusel_item_left_btn{
+    display: block;
+    position: absolute;
+    top: calc(50% - 27px);
+    width: 50px;
+    height: 50px;
+    background-color: $darkblue;
+    border: 2px solid $offwhite;
+    z-index: 1;
+    color: $offwhite;
+    margin:0;
+    @include radius(50%);
+    text-align: center;
+    padding:13px 11px;
+    cursor: pointer;
+    opacity: .6;
+    transition: .4s , letter-spacing 0s;
+    span{
+      margin:0;
+    }
+    &:hover{
+      background-color: $red;
+      letter-spacing: 8px;
+    }
+    &:active {
+      background-color: $blue;
+      color:$offwhite;
+      letter-spacing:0;
+    }
+  }
+  .carusel_item_right_btn{
+    right:20px;
+  }
+  .carusel_item_left_btn{
+    left:20px;
+  }
+  @include break($small_screen_size){
+    .carusel_item_right_btn, .carusel_item_left_btn{
+      background-color: $darkblue;
+      border-radius:20px;
+      top: 4px;
+      width:30px;
+      height:30px;
+      font-size: 10px;
+      padding:5px 0;
+      &:hover,&:active {letter-spacing: 0;}
+    }
+  }
+}
+
+#carusel{ //caption
+  .carusel_item_caption{
+    display: block;
+    position: absolute;
+    bottom:9px;
+    width:100%;
+    color:$offwhite;
+    text-align: center;
+    text-shadow: 0 0 5px black;
+    z-index: 1;
+  }
+}
+
+
+#carusel{
+  ul{
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 20px;
+    color:white;
+    z-index: 1;
+    padding: 0;
+    li{
+      display:inline-block;
+      div{
+        background-color: $offwhite;
+        border:1px;
+        width: 10px;
+        height:10px;
+        border-radius: 50%;
+        border: 1px solid $darkblue;
+      }
+    }
+    .carusel_list_active{
+      background-color: $blue;
+    }
+  }
 }

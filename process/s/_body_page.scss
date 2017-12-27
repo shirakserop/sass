@@ -1,6 +1,7 @@
 
 #body_page{
   display: block;
+  position: absolute;
   width: 100%;
 //  border: 2px dotted red;
   margin: 0;
@@ -16,7 +17,7 @@
 
         p{
           display:block;
-          font-family: tahoma; 
+          font-family: tahoma;
           max-width:100%;
           background-color: $body_page_p_background_color;
           color:$body_page_p_text_color;

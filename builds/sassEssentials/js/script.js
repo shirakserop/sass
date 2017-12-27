@@ -7,6 +7,16 @@ var   btn = document.getElementsByClassName("menu_btn")[0],
       span3 = document.getElementsByClassName('menu_btn_span3')[0];
 //EndOf menu button and menu list activity __ variables-------------------------
 
+//carusel_items --------------Variables-------
+var    carusel = document.querySelector('#carusel'),
+       carusel_items = document.querySelector('.carusel_item'),
+       carusel_item_left_btn = document.querySelector('.carusel_item_left_btn'),
+       carusel_item_right_btn = document.querySelector('.carusel_item_left_btn'),
+       carusel_item_caption = document.querySelector('.carusel_item_caption'),
+       carusel_list = document.querySelector('.carusel_list'),
+       carusel_list = document.querySelector('.carusel_list_active');
+//End of carusel_items -------Variables-------
+
 //menu button and menu list activity __ functions------------------------
 btn.addEventListener('click', function(event){
     if(event.target = btn){
@@ -25,23 +35,10 @@ function X(){
 }//EndOf menu button and menu list activity __ functions------------------------
 
 
-//carusel
-var slide = document.getElementsByClassName('carusel_item');
-var btn2 = document.getElementsByClassName('title')[0];
+//carusel_functions --------------------------functions------
+  
 
-    var num = 0;
-    var i;
 
-      btn2.onclick = function (){
-        for(i=0; i < slide.length; i++){
-          slide[i].style.display = "none";
-        }
-        num++;
-        if(num > slide.length - 1){
-          num = 0;
-        }else if(num < 0){
-          num = slide.length -1;
-        }
-        console.log(num);
-        slide[num].style.display = "block";
-      }
+
+
+//End of carusel_functions -------------------functions------
