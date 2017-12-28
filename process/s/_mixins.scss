@@ -18,11 +18,27 @@
   @media screen and (max-width: $width){
     @content;
   }
-
 }
-
+@mixin break_big($width){
+  @media screen and (min-width: $width){
+    @content;
+  }
+}
 @mixin grid($cells,$margin){
     width: ((100% - ($cells - 1)* $margin)/$cells);
+    &:nth-child(n){
+      margin-right: $margin;
+      margin-top: $margin;
+    }
+    &:nth-child(#{$cells}n){
+      margin-right:0;
+      margin-bottom: 0;
+    }
+}
+
+
+@mixin grid_width($cells,$margin,$width){
+    width: (($width - ($cells - 1)* $margin)/$cells);
     &:nth-child(n){
       margin-right: $margin;
       margin-top: $margin;
