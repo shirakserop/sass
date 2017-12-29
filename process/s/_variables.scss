@@ -23,8 +23,12 @@
   $big_screen_size:         1000px;
   $medium_screen_size:       600px;
   $small_screen_size:        600px;
-
                         //page colors settings
+
+  $main_background:                 $offwhite;
+  $footer_columns_background_1:     lighten($red,20%);
+  $footer_columns_background_2:     darken($offwhite,10%);
+  $footer_columns_background_text:  $darkblue;
 
   //header_settings
   $nav_bkground:                    $offwhite;
