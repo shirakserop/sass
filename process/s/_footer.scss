@@ -1,0 +1,31 @@
+footer{
+  display: block;
+  margin:0;
+  padding:0;
+  //border: 2px solid red;
+}
+
+.footer_body{
+  padding:0;
+}
+.footer_par{
+  color:$footer_columns_background_text;
+  &:nth-child(even){
+    background-color:$footer_columns_background_1;
+  }
+  &:nth-child(odd){
+    background-color:$footer_columns_background_2;
+  }
+  p{
+    margin:0 auto;
+  }
+}
+.footer_copyright{
+  margin:0 auto;
+  text-align: center;
+  background-color: $offwhite;
+  text-transform:lowercase;
+  h5{
+    margin:0;
+  }
+}
