@@ -53,7 +53,7 @@
     .post_area_title{
       padding:15px;
       margin:0 auto;
-      background-color: darken($offwhite,10%);
+      background-color: $post_area_title_color;
       box-shadow: 0 0 5px $darkblue;
       text-transform: capitalize;
       border-radius: 10px 10px 0 0;
@@ -68,7 +68,7 @@
     .post_area_body{
       //border: 1px solid $darkblue;
       border-radius: 0 0 10px 10px;
-      background-color: lighten($red,30%);
+      background-color: $post_area_body_color;
       box-shadow: 0 0 5px $darkblue;
       margin: 7px auto;
       p{
@@ -90,7 +90,15 @@
         margin-top: 0;
       }
       li{
+        &:nth-child(odd){background-color: darken($offwhite,10%);}
+        &:hover {background-color: lighten($red,35%);}
         list-style: none;
+        border-bottom: 1px solid black;
+        padding: 6px;
+        a{
+          text-decoration: none;
+
+        }
       }
     }
   }

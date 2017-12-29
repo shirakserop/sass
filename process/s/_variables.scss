@@ -26,10 +26,6 @@
                         //page colors settings
 
   $main_background:                 $offwhite;
-  $footer_columns_background_1:     lighten($red,20%);
-  $footer_columns_background_2:     darken($offwhite,10%);
-  $footer_columns_background_text:  $darkblue;
-
   //header_settings
   $nav_bkground:                    $offwhite;
   $transparent :                    rgba(0,0,0,0);
@@ -66,3 +62,12 @@
   $carusel_caption_color:           $offwhite;
   $carusel_dots_color:              $red;
   $carusel_dots_active_color:       $offwhite;
+
+  //post area
+  $post_area_title_color:           darken($offwhite,10%);
+  $post_area_body_color:            lighten($red,30%);
+  //footer settings
+  $footer_columns_background_1:     lighten($red,20%);
+  $footer_columns_background_2:     darken($offwhite,10%);
+  $footer_columns_background_text:  $darkblue;
+  $footer_copyright_background:     $offwhite;
